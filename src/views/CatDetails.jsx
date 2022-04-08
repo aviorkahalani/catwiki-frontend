@@ -1,0 +1,28 @@
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { catService } from '../services/cat-service'
+import BreedInfo from '../components/BreedInfo'
+import BreedPhotos from '../components/BreedPhotos'
+
+const catDetails = () => {
+  let { breedId } = useParams()
+  const [breed, setBreed] = useState(null)
+
+  useEffect(async () => {
+    const breed = await catService.getBreedById(breedId)
+    setBreed(breed)
+  }, [])
+
+  return (
+    <React.Fragment>
+      {breed && (
+        <section className="main">
+          <BreedInfo breed={breed} />
+          <BreedPhotos breedId={breedId} />
+        </section>
+      )}
+    </React.Fragment>
+  )
+}
+
+export default catDetails

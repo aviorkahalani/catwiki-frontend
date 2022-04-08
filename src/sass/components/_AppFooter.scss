@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 100px;
+  padding-block: 15px;
+  background: #000;
+  color: white;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+
+  &__logo {
+    filter: brightness(0) invert(1);
+  }
+
+  &__info {
+    .username {
+      font-family: 'Montserrat-Bold';
+    }
+  }
+}
