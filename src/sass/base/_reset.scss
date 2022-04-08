@@ -34,3 +34,11 @@ img {
   grid-area: footer;
   min-height: 10vh;
 }
+
+.MuiPaper-root {
+  top: 49% !important;
+
+  .MuiList-root {
+    height: 200px !important;
+  }
+}

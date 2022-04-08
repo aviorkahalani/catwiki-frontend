@@ -1,14 +1,18 @@
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import MenuItem from '@mui/material/MenuItem'
+import Select from '@mui/material/Select'
 
 const Hero = (props) => {
   let navigate = useNavigate()
+  const [breedId, setBreedId] = useState('')
+
+  const handleChange = (ev) => {
+    navigate(`/cat/${ev.target.value}`)
+  }
 
   const getImage = () => {
     return new URL('../assets/CatwikiLogo.svg', import.meta.url).href
-  }
-
-  const handleOption = () => {
-    console.log('clicked')
   }
 
   return (
@@ -17,18 +21,21 @@ const Hero = (props) => {
         <img src={getImage()} alt="" />
       </div>
       <p className="hero__title">Get to know more about your cat breed</p>
-      <input
-        list="cats-breeds"
-        type="text"
-        className="hero__search"
-        placeholder="Enter your breed"
-      />
 
-      <datalist className="hero__list" id="cats-breeds">
+      <Select
+        labelId="demo-simple-select-autowidth-label"
+        id="select"
+        value={breedId}
+        onChange={handleChange}>
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
         {props.cats.map((cat) => (
-          <option key={cat.id} value={cat.name} onChange={() => handleOption()}></option>
+          <MenuItem key={cat.id} value={cat.id}>
+            {cat.name}
+          </MenuItem>
         ))}
-      </datalist>
+      </Select>
     </div>
   )
 }

@@ -11,6 +11,16 @@
   border-top-right-radius: 3em;
   border-top-left-radius: 3em;
 
+  #select {
+    padding-inline: 2.5em;
+    width: 200px;
+    border: none;
+    border-radius: 3em;
+    outline: none;
+    background-color: #fff;
+    overflow: auto;
+  }
+
   &__logo {
     width: 280px;
     filter: brightness(0) invert(1);
@@ -19,15 +29,5 @@
   &__title {
     font-size: 2em;
     width: 25ch;
-  }
-
-  &__search {
-    margin-top: 1em;
-    padding-inline: 2.5em;
-    width: 400px;
-    height: 70px;
-    border: none;
-    border-radius: 3em;
-    outline: none;
   }
 }

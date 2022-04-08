@@ -8,6 +8,10 @@
     flex: 1;
     border-radius: 24px;
     overflow: hidden;
+
+    img {
+      object-fit: contain;
+    }
   }
 
   &__content {
