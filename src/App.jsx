@@ -12,7 +12,14 @@ const App = () => {
     setCats(catsData)
   }, [])
 
-  if (!cats) return <h1 className="main">Loading...</h1>
+  const getLoader = () => new URL('./assets/loader.gif', import.meta.url).href
+
+  if (!cats)
+    return (
+      <h1 className="main loader-wrapper">
+        <img className="loader" src={getLoader()} alt="" />
+      </h1>
+    )
 
   return (
     <div className="main">

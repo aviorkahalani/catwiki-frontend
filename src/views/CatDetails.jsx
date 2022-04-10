@@ -13,6 +13,8 @@ const catDetails = () => {
     setBreed(breed)
   }, [])
 
+  const getLoader = () => new URL('../assets/loader.gif', import.meta.url).href
+
   return (
     <React.Fragment>
       {breed && (
@@ -20,6 +22,11 @@ const catDetails = () => {
           <BreedInfo breed={breed} />
           <BreedPhotos breedId={breedId} />
         </section>
+      )}
+      {!breed && (
+        <h1 className="main loader-wrapper">
+          <img className="loader" src={getLoader()} alt="" />
+        </h1>
       )}
     </React.Fragment>
   )

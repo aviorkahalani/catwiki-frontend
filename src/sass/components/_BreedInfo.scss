@@ -1,22 +1,21 @@
 .breed {
   display: flex;
   flex-direction: column;
-  gap: 5em;
+  gap: 1em;
 
   @media (min-width: 440px) {
-    padding-inline: 90px;
     flex-direction: row;
+    gap: 5em;
   }
 
   &__img {
-    width: 370px;
-    height: 370px;
-    flex: 1;
-    border-radius: 24px;
-    overflow: hidden;
+    flex: 2;
 
     img {
-      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
     }
   }
 
@@ -36,8 +35,6 @@
         flex-direction: row;
         align-items: center;
       }
-
-      // justify-content: space-between;
 
       span {
         width: 180px;
