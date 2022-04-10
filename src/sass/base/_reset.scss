@@ -54,20 +54,6 @@ html {
 }
 
 .MuiPaper-root {
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  max-width: unset !important;
-
-  @media (min-width: 440px) {
-    position: absolute !important;
-    width: unset !important;
-    top: 49% !important;
-    // left: unset !important;
-    // max-width: calc(100% - 32px) !important;
-    // height: 200px;
-  }
-
   .MuiList-root {
     height: 300px;
 
