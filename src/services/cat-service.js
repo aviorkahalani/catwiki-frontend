@@ -6,6 +6,7 @@ export const catService = {
   query,
   getBreedById,
   getImagesByBreedId,
+  getMostSearched,
 }
 
 const API_KEY = '577fb47f-2089-447a-804f-5c23c087aeca'
@@ -57,4 +58,10 @@ async function getImagesByBreedId(breedId) {
   }
 
   return breedImages[breedId]
+}
+
+async function getMostSearched() {
+  const cats = await query()
+  const shuffledCats = utilService.shuffle(cats)
+  return shuffledCats.slice(0, 10)
 }

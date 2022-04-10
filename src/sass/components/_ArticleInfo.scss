@@ -1,9 +1,15 @@
 .article {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 3em;
   padding-block: 8em;
-  padding-inline: 100px;
+  padding-inline: 20px;
+
+  @media (min-width: 440px) {
+    flex-direction: row;
+    padding-inline: 100px;
+  }
 
   &__content,
   &__imgs {

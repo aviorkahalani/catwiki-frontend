@@ -1,6 +1,6 @@
 .info {
   padding-block: 60px;
-  padding-inline: 100px;
+  padding-inline: 20px;
   border-bottom-right-radius: 3em;
   border-bottom-left-radius: 3em;
   background: #e3e1dc;
@@ -8,10 +8,20 @@
   flex-direction: column;
   gap: 1em;
 
+  @media (min-width: 440px) {
+    padding-inline: 100px;
+  }
+
   &__title {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
+
+    @media (min-width: 440px) {
+      flex-direction: row;
+      align-items: center;
+    }
 
     .title__link {
       color: #29150785;

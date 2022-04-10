@@ -1,0 +1,41 @@
+.most-searched {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-block: 1em;
+
+  h1 {
+    font-size: 1.5em;
+
+    @media (min-width: 440px) {
+      font-size: 2em;
+    }
+  }
+
+  .cat__preview {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .cat__img {
+      img {
+        border-radius: 24px;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    .cat__info {
+      flex: 2;
+
+      p {
+        // width: 70ch;
+
+        @media (min-width: 440px) {
+          width: 70ch;
+        }
+      }
+    }
+  }
+}

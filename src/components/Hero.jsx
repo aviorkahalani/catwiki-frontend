@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import MenuItem from '@mui/material/MenuItem'
 import Select from '@mui/material/Select'
 
-const Hero = (props) => {
+const Hero = ({ cats }) => {
   let navigate = useNavigate()
   const [breedId, setBreedId] = useState('')
 
@@ -22,15 +22,11 @@ const Hero = (props) => {
       </div>
       <p className="hero__title">Get to know more about your cat breed</p>
 
-      <Select
-        labelId="demo-simple-select-autowidth-label"
-        id="select"
-        value={breedId}
-        onChange={handleChange}>
+      <Select id="select" value={breedId} onChange={handleChange}>
         <MenuItem value="">
-          <em>None</em>
+          <em>Enter your breed</em>
         </MenuItem>
-        {props.cats.map((cat) => (
+        {cats.map((cat) => (
           <MenuItem key={cat.id} value={cat.id}>
             {cat.name}
           </MenuItem>

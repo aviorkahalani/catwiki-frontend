@@ -6,28 +6,46 @@
   background: url('src/assets/images/HeroImagelg.png') center center no-repeat;
   background-size: cover;
   color: white;
-  padding-block: 100px;
-  padding-inline: 100px;
+  padding-block: 50px;
+  padding-inline: 20px;
   border-top-right-radius: 3em;
   border-top-left-radius: 3em;
 
+  @media (min-width: 440px) {
+    padding-block: 100px;
+    padding-inline: 100px;
+  }
+
   #select {
-    padding-inline: 2.5em;
-    width: 200px;
+    padding-inline: 0.5em;
+    width: 150px;
     border: none;
     border-radius: 3em;
     outline: none;
     background-color: #fff;
     overflow: auto;
+
+    @media (min-width: 440px) {
+      width: 200px;
+      padding-inline: 2.5em;
+    }
   }
 
   &__logo {
-    width: 280px;
+    width: 150px;
     filter: brightness(0) invert(1);
+
+    @media (min-width: 440px) {
+      width: 280px;
+    }
   }
 
   &__title {
-    font-size: 2em;
+    font-size: 1em;
     width: 25ch;
+
+    @media (min-width: 440px) {
+      font-size: 2em;
+    }
   }
 }

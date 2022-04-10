@@ -1,6 +1,12 @@
 .breed {
   display: flex;
+  flex-direction: column;
   gap: 5em;
+
+  @media (min-width: 440px) {
+    padding-inline: 90px;
+    flex-direction: row;
+  }
 
   &__img {
     width: 370px;
@@ -22,9 +28,16 @@
 
     .bars {
       display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: flex-start;
+
+      @media (min-width: 440px) {
+        flex-direction: row;
+        align-items: center;
+      }
 
       // justify-content: space-between;
-      align-items: center;
 
       span {
         width: 180px;

@@ -11,18 +11,36 @@ img {
   object-fit: cover;
 }
 
+html {
+  font-size: 14px;
+
+  @media (min-width: 440px) {
+    font-size: 16px;
+  }
+}
+
 .main-layout {
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 30fr 1fr;
   grid-template-areas:
     '. header .'
     '. main .'
     '. footer .';
+
+  @media (min-width: 440px) {
+    grid-template-columns: 1fr 8fr 1fr;
+  }
 }
 
 .main {
   grid-area: main;
   min-height: calc(100vh - 20vh);
+  // padding-inline: 10px;
+
+  @media (min-width: 440px) {
+    padding-inline: unset;
+    // width: 200px;
+  }
 }
 
 .header {
