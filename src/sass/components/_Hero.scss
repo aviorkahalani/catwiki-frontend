@@ -17,6 +17,8 @@
   }
 
   #select {
+    position: static;
+
     padding-inline: 0.5em;
     width: 150px;
     border: none;
@@ -26,6 +28,7 @@
     overflow: auto;
 
     @media (min-width: 440px) {
+      position: relative;
       width: 200px;
       padding-inline: 2.5em;
     }
