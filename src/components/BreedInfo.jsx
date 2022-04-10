@@ -7,6 +7,8 @@ const BreedInfo = ({ breed }) => {
     return [...Array(num)].map((e, idx) => <div className="bar--empty" key={idx}></div>)
   }
 
+  if (!breed) return <h1 className="main">Loading...</h1>
+
   return (
     <div className="breed">
       <div className="breed__img">

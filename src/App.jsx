@@ -12,7 +12,7 @@ const App = () => {
     setCats(catsData)
   }, [])
 
-  if (!cats) return <h1>Loading...</h1>
+  if (!cats) return <h1 className="main">Loading...</h1>
 
   return (
     <div className="main">
