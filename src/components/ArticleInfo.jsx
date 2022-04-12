@@ -1,4 +1,6 @@
 const ArticleInfo = () => {
+  const getImage = (path) => new URL(`../assets/images/${path}.png`, import.meta.url).href
+
   return (
     <section className="article">
       <div className="article__content">
@@ -12,9 +14,9 @@ const ArticleInfo = () => {
         </a>
       </div>
       <div className="article__imgs">
-        <img className="img-1" src="src/assets/images/image1.png" alt="" />
-        <img className="img-2" src="src/assets/images/image2.png" alt="" />
-        <img className="img-3" src="src/assets/images/image3.png" alt="" />
+        <img className="img-1" src={getImage('image1')} alt="" />
+        <img className="img-2" src={getImage('image2')} alt="" />
+        <img className="img-3" src={getImage('image3')} alt="" />
       </div>
     </section>
   )
