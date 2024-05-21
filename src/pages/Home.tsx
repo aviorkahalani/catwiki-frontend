@@ -1,10 +1,11 @@
 import Container from '../components/Container'
+import Hero from '../components/home/Hero'
 
 export default function Home() {
   return (
     <section>
       <Container>
-        <h1>Home</h1>
+        <Hero />
       </Container>
     </section>
   )
