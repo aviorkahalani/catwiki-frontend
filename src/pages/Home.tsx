@@ -1,5 +1,5 @@
 import Container from '../components/Container'
-import Benefits from '../components/home/Benefits'
+import BenefitsPreview from '../components/home/BenefitsPreview'
 import Featured from '../components/home/Featured'
 import Hero from '../components/home/Hero'
 
@@ -9,7 +9,7 @@ export default function Home() {
       <Container>
         <Hero />
         <Featured />
-        <Benefits />
+        <BenefitsPreview />
       </Container>
     </section>
   )

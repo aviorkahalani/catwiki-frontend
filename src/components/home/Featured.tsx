@@ -1,12 +1,13 @@
 import { useFetchCatBreedsQuery } from '../../store'
 import { Link } from 'react-router-dom'
+import Loader from '../Loader'
 
 export default function Featured() {
-  const { data: breeds, isLoading, error } = useFetchCatBreedsQuery()
+  const { data: breeds, isLoading } = useFetchCatBreedsQuery()
 
   let content: React.ReactNode = null
   if (isLoading) {
-    content = <div>Loading...</div>
+    content = <Loader />
   } else if (breeds) {
     content = breeds.slice(0, 4).map((breed) => (
       <article
@@ -18,7 +19,7 @@ export default function Featured() {
           alt={breed.name}
           className="aspect-square object-cover"
         />
-        <p className="text-lg font-light">{breed.name}</p>
+        <p className="text-sm font-light md:text-lg">{breed.name}</p>
       </article>
     ))
   }
@@ -37,9 +38,7 @@ export default function Featured() {
         </Link>
       </div>
 
-      <div className="grid gap-2.5 sm:grid-cols-2 md:grid-cols-4">
-        {content}
-      </div>
+      <div className="grid grid-cols-2 gap-2.5 md:grid-cols-4">{content}</div>
     </div>
   )
 }

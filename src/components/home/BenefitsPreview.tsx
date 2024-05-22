@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export default function Benefits() {
+export default function BenefitsPreview() {
   const images = [
     new URL('../../assets/cat-3.jpg', import.meta.url).href,
     new URL('../../assets/cat-4.jpg', import.meta.url).href,
@@ -25,11 +25,14 @@ export default function Benefits() {
       </div>
       <div className="grid flex-1 grid-cols-2 gap-2.5">
         {images.map((image) => (
-          <div key={image} className="overflow-hidden rounded shadow-sm">
+          <div
+            key={image}
+            className="aspect-square overflow-hidden rounded shadow-sm"
+          >
             <img
               src={image}
               alt=""
-              className="aspect-square h-full w-full object-cover md:aspect-auto"
+              className="h-full w-full object-cover md:aspect-auto"
             />
           </div>
         ))}
