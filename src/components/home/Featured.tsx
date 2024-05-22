@@ -10,7 +10,8 @@ export default function Featured() {
     content = <Loader />
   } else if (breeds) {
     content = breeds.slice(0, 4).map((breed) => (
-      <article
+      <Link
+        to={`/breeds/${breed.id}`}
         key={breed.id}
         className="space-y-2.5 overflow-hidden rounded shadow-sm"
       >
@@ -20,7 +21,7 @@ export default function Featured() {
           className="aspect-square object-cover"
         />
         <p className="text-sm font-light md:text-lg">{breed.name}</p>
-      </article>
+      </Link>
     ))
   }
 

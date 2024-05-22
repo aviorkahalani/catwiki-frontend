@@ -1,6 +1,6 @@
 export default function Loader() {
   return (
-    <div role="status">
+    <div role="status" className="grid place-content-center">
       <svg
         aria-hidden="true"
         className="h-8 w-8 animate-spin fill-gray-600 text-gray-200 dark:text-gray-600"

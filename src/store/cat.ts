@@ -8,7 +8,17 @@ export const catApi = createApi({
     fetchCatBreeds: builder.query<CatBreed[], void>({
       query: () => '',
     }),
+    fetchCatBreedById: builder.query<CatBreed, string>({
+      query: (id) => `/${id}`,
+    }),
+    fetchCatBreedImagesById: builder.query<string[], string>({
+      query: (id) => `/images/${id}`,
+    }),
   }),
 })
 
-export const { useFetchCatBreedsQuery } = catApi
+export const {
+  useFetchCatBreedsQuery,
+  useFetchCatBreedByIdQuery,
+  useFetchCatBreedImagesByIdQuery,
+} = catApi

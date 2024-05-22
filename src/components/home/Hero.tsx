@@ -10,7 +10,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="flex flex-col items-start rounded-t bg-hero bg-cover bg-center p-10 py-20">
+    <div className="flex flex-col items-start rounded-t bg-gray-300 bg-hero bg-cover bg-center p-10 py-20">
       <h1 className="mb-7 flex items-center gap-2.5 text-3xl">
         CatWiki <Cat size={30} />
       </h1>

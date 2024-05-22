@@ -1,7 +1,6 @@
 import { useFetchCatBreedsQuery } from '../store'
-import Container from '../components/Container'
-import Loader from '../components/Loader'
 import { Link } from 'react-router-dom'
+import Container from '../components/Container'
 import CardSkeleton from '../components/CardSkeleton'
 
 export default function Breeds() {

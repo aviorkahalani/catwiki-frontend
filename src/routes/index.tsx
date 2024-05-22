@@ -3,6 +3,7 @@ import App from '../App'
 import Home from '../pages/Home'
 import Benefits from '../pages/Benefits'
 import Breeds from '../pages/Breeds'
+import Breed from '../pages/Breed'
 
 export const router = createBrowserRouter([
   {
@@ -22,8 +23,8 @@ export const router = createBrowserRouter([
         element: <Breeds />,
       },
       {
-        path: '/benefits',
-        element: <Benefits />,
+        path: '/breeds/:breedId',
+        element: <Breed />,
       },
     ],
   },

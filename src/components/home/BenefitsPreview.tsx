@@ -25,14 +25,11 @@ export default function BenefitsPreview() {
       </div>
       <div className="grid flex-1 grid-cols-2 gap-2.5">
         {images.map((image) => (
-          <div
-            key={image}
-            className="aspect-square overflow-hidden rounded shadow-sm"
-          >
+          <div key={image} className="overflow-hidden rounded shadow-sm">
             <img
               src={image}
               alt=""
-              className="h-full w-full object-cover md:aspect-auto"
+              className="aspect-square h-full w-full object-cover md:aspect-auto"
             />
           </div>
         ))}
