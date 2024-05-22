@@ -7,7 +7,6 @@ import Container from '../components/Container'
 import Loader from '../components/Loader'
 import BreedInfo from '../components/breed/BreedInfo'
 import BreedImages from '../components/breed/BreedImages'
-import BreedTraits from '../components/breed/BreedTraits'
 
 export default function Breed() {
   const { breedId } = useParams()
@@ -15,7 +14,7 @@ export default function Breed() {
     ? useFetchCatBreedByIdQuery(breedId)
     : { data: null, isLoading: false }
 
-  const { data: images = null, isLoading: isImagesLoading = false } = breedId
+  const { data: images = null } = breedId
     ? useFetchCatBreedImagesByIdQuery(breedId)
     : { data: null, isLoading: false }
 
