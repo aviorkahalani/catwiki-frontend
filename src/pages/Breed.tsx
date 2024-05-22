@@ -16,7 +16,7 @@ export default function Breed() {
 
   const { data: images = null } = breedId
     ? useFetchCatBreedImagesByIdQuery(breedId)
-    : { data: null, isLoading: false }
+    : { data: null }
 
   let content: React.ReactNode = null
   if (isBreedLoading) {
