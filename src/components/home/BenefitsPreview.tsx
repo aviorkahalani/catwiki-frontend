@@ -19,7 +19,7 @@ export default function BenefitsPreview() {
           Having a cat around you can actually trigger the release of calming
           chemicals in your body which lower your stress and anxiety leves
         </p>
-        <Link to="/" className="transition hover:text-blue-600">
+        <Link to="/benefits" className="transition hover:text-blue-600">
           Read More →
         </Link>
       </div>
