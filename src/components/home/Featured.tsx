@@ -31,7 +31,7 @@ export default function Featured() {
       <div className="mb-7 flex w-full flex-wrap items-end justify-between">
         <p className="text-3xl font-light">66+ Breeds For you to discover</p>
         <Link
-          to="/"
+          to="/breeds"
           className="text-sm font-light opacity-80 transition hover:underline hover:opacity-100"
         >
           See More →
