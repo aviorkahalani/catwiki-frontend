@@ -1,30 +1,78 @@
-# React + TypeScript + Vite
+# CatWiki
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to _CatWiki_! This app is your ultimate guide to exploring and browsing different breeds of cats. Whether you are a seasoned cat lover or a curious beginner, CatWiki provides comprehensive information about various cat breeds to help you find your perfect feline companion.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- _Home Page_: Features four popular cat breeds.
+- _Browse Breeds_: Explore detailed information on over 60 cat breeds.
+- _Why You Should Have a Cat_: Learn about the benefits and joys of having a cat as a pet.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- _React_: A JavaScript library for building user interfaces.
+- _TypeScript_: A superset of JavaScript that adds static types.
+- _Tailwind CSS_: A utility-first CSS framework for rapid UI development.
+- _Express_: A minimal and flexible Node.js web application framework.
+- _Node.js_: A JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started
+
+To get a local copy of the project up and running, follow these steps.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+1.  _Clone the repository:_
+
+    ```bash
+    git clone https://github.com/aviorkahalani/catwiki-frontend
+    ```
+
+    ```bash
+    cd catwiki-frontend
+    ```
+
+2.  _Install dependencies:_
+
+    ```bash
+    npm install
+    ```
+
+3.  _Run the development server:_
+
+    ```bash
+    npm run dev
+    ```
+
+## Usage
+
+Navigate through the app using the menu to:
+
+- _Browse Cat Breeds_: Discover information about more than 60 cat breeds.
+- _Featured Breeds_: Quickly access details about the four featured breeds on the home page.
+- _Learn About Cats_: Find out why having a cat can be a wonderful experience.
+
+## Screenshot
+
+![CatWiki Screenshot](https://res.cloudinary.com/avior-projects/image/upload/v1716389231/ea22c974-a333-4fdb-a97d-c8da0023c841.png)
+
+---
+
+Thank you for visiting CatWiki! We hope you enjoy exploring the world of cats with our app.
