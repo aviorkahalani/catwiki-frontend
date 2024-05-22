@@ -1,10 +1,13 @@
-import { useFetchCatBreedsQuery } from '../../store'
 import { Link } from 'react-router-dom'
 import Loader from '../Loader'
+import { CatBreed } from '../../types'
 
-export default function Featured() {
-  const { data: breeds, isLoading } = useFetchCatBreedsQuery()
+interface FeaturedProps {
+  breeds?: CatBreed[] | null
+  isLoading: boolean
+}
 
+export default function Featured({ breeds, isLoading }: FeaturedProps) {
   let content: React.ReactNode = null
   if (isLoading) {
     content = <Loader />
